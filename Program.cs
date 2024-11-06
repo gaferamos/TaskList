@@ -6,8 +6,9 @@ namespace TaskList
     {
         private static void Main(string[] args)
         {
-            TaskManager tskm = new TaskManager();
-            Menu.Menuoption();
+            while (true) {
+                Menu.Menuoption();
+            }
         }
     }
 }

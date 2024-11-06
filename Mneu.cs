@@ -5,6 +5,7 @@ namespace TaskList
 {
     public class Menu
     {
+        
         public static void Menuoption()
         {
             Console.Clear();
@@ -37,7 +38,7 @@ namespace TaskList
         public static void Optinhendler( short valor ) 
         { 
            
-                TaskManager tskm = new TaskManager();
+                
 
                 switch (valor)
                 {
@@ -45,19 +46,24 @@ namespace TaskList
 
                     case 1:
                         {
+                            Console.Clear();
                             Console.WriteLine("ADICIONAR TAREFAS");
                             Thread.Sleep(1000);
                             
-                            tskm.Addtask();
-                            Menuoption();
+                            TaskManager.Addtask();
+                           
 
                         }; 
                     break;
 
                     case 2:
                     {
+                        Console.Clear();
+                        Console.WriteLine("MOSTRAR TAREFAS");
+                        Thread.Sleep(1000);
 
-                      tskm.Sowtasks();
+                        TaskManager.Sowtasks();
+
                         
 
                     }
@@ -65,19 +71,30 @@ namespace TaskList
 
                     case 3: 
                         {
-                            Console.WriteLine("1 - ADICIONAR TAREFAS");
+                            Console.Clear();
+                            Console.WriteLine("EDITAR TAREFAS");
+                            Thread.Sleep(1000);
+                            TaskManager.EditTask();
                         }
                     break;
 
                     case 4: 
                         {
-                            Console.WriteLine("1 - ADICIONAR TAREFAS");
+                            Console.Clear();
+                            Console.WriteLine("CONCLUIR TAREFAS");
+                            Thread.Sleep(1000);
+
+                            TaskManager.Taskstatus();
                         }
                     break;
 
                     case 5:
                         {
-                            Console.WriteLine("1 - ADICIONAR TAREFAS");
+                            Console.Clear();
+                            Console.WriteLine("EXCLUIR TAREFAS");
+                            Thread.Sleep(1000);
+                            TaskManager.DeleteTask();
+                           
                         }
                     break;
                 }
